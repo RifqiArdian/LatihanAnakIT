@@ -29,3 +29,8 @@ Route::post('/loginPost', 'User@loginPost');
 Route::get('/register', 'User@register');
 Route::post('/registerPost', 'User@registerPost');
 Route::get('/logout', 'User@logout');
+
+Route::get('/email', function () {
+    return view('send_email');
+});
+Route::post('/sendEmail', 'Email@sendEmail');
